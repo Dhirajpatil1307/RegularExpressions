@@ -9,7 +9,7 @@ public class RegularExpressions {
 
 	boolean FirstEntity() {
 		String i;
-		System.out.println("Enter Your First Name :-");
+		System.out.println("Enter Your Email Id :-");
 		i = SC.next();
 		Pattern pattern = Pattern.compile("^[A-Z]{1}[a-z]{2}$");// Regex sintax
 		Matcher matcher = pattern.matcher(i);// Regex sintax

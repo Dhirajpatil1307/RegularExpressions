@@ -41,9 +41,24 @@ public class RegularExpressions {
 
 	boolean EmailVerification() {
 		String i;
-		System.out.println("Enter Your Last Name :-");
+		System.out.println("Enter Your Email Id :-");
 		i = SC.next();
 		Pattern pattern = Pattern.compile("^[a-z0-9+_.-]+@[a-zA-Z0-9.-]+$");// Regex sintax
+		Matcher matcher = pattern.matcher(i);// Regex sintax
+
+		boolean matchFound = matcher.matches();// Use for identification of correct or incorrect.
+		if (matchFound) {
+			System.out.println("According To Pattern Matcher is Correct");
+		} else {
+			System.out.println("According To Pattern Matcher is Inorrect");
+		}
+		return matchFound;
+	}
+	boolean MobileNumberVerification() {
+		String i;
+		System.out.println("Enter Your Mobile Number :-");
+		i = SC.next();
+		Pattern pattern = Pattern.compile("^[7-9][0-9]{9}$");// Regex sintax
 		Matcher matcher = pattern.matcher(i);// Regex sintax
 
 		boolean matchFound = matcher.matches();// Use for identification of correct or incorrect.

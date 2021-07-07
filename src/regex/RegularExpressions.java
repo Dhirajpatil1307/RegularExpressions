@@ -41,7 +41,7 @@ public class RegularExpressions {
 
 	boolean EmailVerification() {
 		String i;
-		System.out.println("Enter Your Last Name :-");
+		System.out.println("Enter Your Email Id :-");
 		i = SC.next();
 		Pattern pattern = Pattern.compile("^[a-z0-9+_.-]+@[a-zA-Z0-9.-]+$");// Regex sintax
 		Matcher matcher = pattern.matcher(i);// Regex sintax
